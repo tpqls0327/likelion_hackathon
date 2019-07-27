@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+
+            <div class="Reservation">
+                <div class="Reservation-title">
+                        <a>예약하기</a>
+                    </div>
+                <div class="Reservation-form">
+                    <label for="people"  style="padding-left:10px;">인원</label><br>
+                    <form style="padding-left: 10px">
+                        <select>
+                            <option>1명</option>
+                            <option>2명</option>
+                            <option>3명</option>
+                            <option>4명</option>
+                            <option>5명</option>
+                        </select><br>
+                        </form>
+                    <form style="padding-left: 10px">
+                        <label for="time">예약날짜 및 시간</label><br>
+                        <input type="date" class="date""><br><br>
+                        <input type="time" class="time"><br><br>
+                        </form>
+                    <a style="padding-left: 10px">예약시간 5분 초과시 예약이 취소됩니다!</a><br>
+                    <div class=Reservation-btn>
+                        <button type="submit" onclick = "location.href = '{% url 'reservation_ok' %}'" class="Reservation-btn1">예약하기</button>
+                        </div>
+                </div>
+            </div>
+
+            {% endblock %}

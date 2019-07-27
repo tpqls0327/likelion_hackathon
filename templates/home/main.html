@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="title-div">
+        <i class="fas fa-utensils fa-4x"></i><br>
+        <a class="title">1414</a> <br>
+        <a class="sub-title">실시간 식당 예약 서비스</a>
+    </div>
+    <div class="search">
+        
+
+        <form action ="{% url 'result' %}" method="GET">
+            <input class="search-txt" type="text" name="" placeholder="지역을 입력해주세요">
+            <input class="search-btn" type="submit" value="찾기!">
+        </form>
+
+        
+
+
+    </div>
+    
+    <div class="notice1">
+        <a>현재 광주광역시 남구 동구 지역만 가능해요</a>
+    </div>
+{% endblock %}

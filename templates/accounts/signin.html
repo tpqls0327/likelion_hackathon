@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <div class="Login-title">
+        <a>로그인</a>
+    </div>
+
+    <div class="form">
+        <div class="form1">
+            <label for="exampleInputEmail1">계정(이메일)</label><br>
+            <input type="email" class="Login-id" name="Login-id" placeholder="ID"><br>
+            <label for="exampleInputPassword">비밀번호</label><br>
+            <input type="password" class="Login-pw" name="Login=pw" placeholder="PassWord">
+            <div class="Login-btn1">
+                <button type="submit" class="Login-btn">로그인</button>
+            </div>
+            <div class="GLogin-btn1">
+                <button type="button" class="GLogin-btn">Google 계정으로 로그인하기</button>
+            </div>
+            <div class="KLogin-btn1">
+                <button type="button" class="KLogin-btn" href="#">카카오 계정으로 로그인하기</button>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}
