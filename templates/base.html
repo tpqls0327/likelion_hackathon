@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <title>1414</title>
 </head>
 <body>
@@ -18,19 +19,37 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <a class="navbar-brand" href="{% url 'home' %}">1414</a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'signin' %}">로그인<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'signup' %}">회원가입<span class="sr-only">(current)</span></a>
-                    </li>    
+
                 <li class="nav-item active">
                         <a class="nav-link" href="#">사장님메뉴<span class="sr-only">(current)</span></a>
                     </li>    
                 <li class="nav-item active">
-                        <a class="nav-link" href="#">페이지정보<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">about<span class="sr-only">(current)</span></a>
                     </li>    
                     </ul>
+                    <ul class="navbar-nav d-none d-lg-flex ml-2 order-3">
+                            {% if user.is_authenticated %}
+                            <li class="nav-item"><a class="nav-link" href="#">{{user.username}} 님!</a></li>
+                            <li class="nav-item"><a class="nav-link" href="javascript:{document.getElementById('logout').submit()}">로그아웃</a></li>
+                            <form id="logout" method="POST" action="{% url 'logout' %}">
+                                {% csrf_token %} <input type="hidden" />
+                            </form>
+                            {% else %}
+                            <li class="nav-item"><a class="nav-link" href="{% url 'signin' %}">Sign in</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'signup' %}">Sign up</a></li>
+                            {% endif %}
+                        </ul>
+                        <!-- 반응형 -->
+                        <ul class="navbar-nav d-lg-none">
+                            <li class="nav-item-divider"></li>
+                            {% if user.is_authenticated %}
+                            <li class="nav-item"><a class="nav-link" href="#">{{user.username}} 님!</a></li>
+                            <li class="nav-item"><a class="nav-link" href="javascript:{document.getElementById('logout').submit()}">로그아웃</a></li>
+                            {% else %}
+                            <li class="nav-item"><a class="nav-link" href="{% url 'signin' %}">Sign in</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'signup' %}">Sign up</a></li>
+                            {% endif %}
+                        </ul>
             </div>
             </nav>
 

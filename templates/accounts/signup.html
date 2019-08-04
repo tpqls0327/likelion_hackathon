@@ -7,17 +7,24 @@
     
     <div class="signup-form">
         <div class="signup-form1">
+                <form method="POST" action="{% url 'signup'%}">
+
+                        {% csrf_token %}
+
             <label for="InputEmail1">계정(이메일)</label><br>
-            <input type="email" class="Signup-id" name="Signup-id"><br>
+            <input type="email" class="Signup-id" name="username"><br>
             <label for="InputName" style="padding-top: 10px;">이름</label><br>
             <input type="name" class="Name" name="Name"><br>
             <label for="InputPassword" style="padding-top: 10px;">비밀번호</label><br>
-            <input type="password" class="Signup-pw" name="Signup=pw"><br>
+            <input type="password" class="Signup-pw" name="password1"><br>
             <label for="InputPassword1" style="padding-top: 10px;">비밀번호(확인)</label><br>
-            <input type="password" class="Signup-pw1" name="Signup=pw1">
+            <input type="password" class="Signup-pw1" name="password2">
         </div>
         <div class="Signup-btn1">
             <button type="submit" class="Signup-btn">회원가입</button>
+        
+        </form>
+        
         </div>
     </div>
 {% endblock %}
