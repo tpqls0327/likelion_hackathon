@@ -11,8 +11,6 @@ class Profile(models.Model):
     updated_at = models.DateTimeField(blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     user_comments = models.DateTimeField(blank=True, null=True)
-    class Meta:
-        db_table = 'member'
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):  
@@ -31,10 +29,6 @@ class Reservation(models.Model):
     resr_status = models.CharField(max_length=1)
     reser_time = models.DateTimeField(blank=True, null=True)
 
-    class Meta:
-        managed = False
-        db_table = 'reservation'
-
 class Restaurant(models.Model):
     shopname = models.CharField(max_length=20)
     profile_img = models.CharField(max_length=250, blank=True, null=True)
@@ -46,9 +40,6 @@ class Restaurant(models.Model):
     shop_location_new = models.CharField(max_length=250, blank=True, null=True)
     shop_location_old = models.CharField(max_length=250, blank=True, null=True)
     shop_comments = models.TextField(blank=True, null=True)
-
-    class Meta:
-        db_table = 'Restaurant'
         
 class nothing():
     nothing = 0
