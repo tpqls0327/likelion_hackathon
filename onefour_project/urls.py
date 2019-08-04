@@ -7,4 +7,5 @@ urlpatterns = [
     path('', home.views.home, name='home'),
     path('',include('home.urls')),
     path('accounts/', include('account_user.urls')),
+    path('manager/', include('account_manager.urls')),
 ]

@@ -20,10 +20,6 @@
                 <a class="navbar-brand" href="{% url 'home' %}">1414</a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
-<<<<<<< HEAD
-                <li class="nav-item active">
-                        <a class="nav-link" href="#">사장님메뉴<span class="sr-only">(current)</span></a>
-=======
 
                     {% if user.is_authenticated %}
                     <li class="nav-item active">
@@ -32,7 +28,6 @@
                     {% else %}
                     <li class="nav-item active">
                         <a class="nav-link" href="{% url 'manager_signin' %}">사장님메뉴<span class="sr-only">(current)</span></a>
->>>>>>> 각종페이지추가, manager앱추가, css수정
                     </li>    
                     {% endif %}
                 <li class="nav-item active">
@@ -41,42 +36,25 @@
                     </ul>
                     <ul class="navbar-nav d-none d-lg-flex ml-2 order-3">
                             {% if user.is_authenticated %}
-<<<<<<< HEAD
-                            <li class="nav-item"><a class="nav-link" href="#">{{user.username}} 님!</a></li>
-=======
                             <li class="nav-item"><a class="nav-link" href="{% url 'reservation_list' %}">{{user.username}} 님!</a></li>
->>>>>>> 각종페이지추가, manager앱추가, css수정
                             <li class="nav-item"><a class="nav-link" href="javascript:{document.getElementById('logout').submit()}">로그아웃</a></li>
                             <form id="logout" method="POST" action="{% url 'logout' %}">
                                 {% csrf_token %} <input type="hidden" />
                             </form>
                             {% else %}
-<<<<<<< HEAD
-                            <li class="nav-item"><a class="nav-link" href="{% url 'signin' %}">Sign in</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'signup' %}">Sign up</a></li>
-=======
                             <li class="nav-item"><a class="nav-link" href="{% url 'signin' %}">로그인</a></li>
                             <li class="nav-item"><a class="nav-link" href="{% url 'signup' %}">회원가입</a></li>
->>>>>>> 각종페이지추가, manager앱추가, css수정
                             {% endif %}
                         </ul>
                         <!-- 반응형 -->
                         <ul class="navbar-nav d-lg-none">
                             <li class="nav-item-divider"></li>
                             {% if user.is_authenticated %}
-<<<<<<< HEAD
-                            <li class="nav-item"><a class="nav-link" href="#">{{user.username}} 님!</a></li>
-                            <li class="nav-item"><a class="nav-link" href="javascript:{document.getElementById('logout').submit()}">로그아웃</a></li>
-                            {% else %}
-                            <li class="nav-item"><a class="nav-link" href="{% url 'signin' %}">Sign in</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'signup' %}">Sign up</a></li>
-=======
                             <li class="nav-item"><a class="nav-link" href="{% url 'reservation_list' %}">{{user.username}} 님!</a></li>
                             <li class="nav-item"><a class="nav-link" href="javascript:{document.getElementById('logout').submit()}">로그아웃</a></li>
                             {% else %}
                             <li class="nav-item"><a class="nav-link" href="{% url 'signin' %}">로그인</a></li>
                             <li class="nav-item"><a class="nav-link" href="{% url 'signup' %}">회원가입</a></li>
->>>>>>> 각종페이지추가, manager앱추가, css수정
                             {% endif %}
                         </ul>
             </div>

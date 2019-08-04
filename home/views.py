@@ -18,9 +18,13 @@ def info(request):
     return render(request, 'info.html')
 
 def search(request):
-    posts = list()
-    target = request.GET['address']
-    things = Restaurant.objects.filter(Q(shop_location_new __contains=target) | Q(shop_location_old__contains=target))
+    target = request.POST["this_ad"]
+    posts = {Restaurant.objects.filter(Q(shop_location_new__contains=target) | Q(shop_location_old__contains=target))}
     
-    posts.append(thing)
-    return render(request, 'result(real).html', {'posts',posts,})
+    return render(request, 'result(real).html', {'posts':posts})
+
+def reservation_list(request):
+    return render(request, 'reservation_list.html')
+
+def reservation_cancel(request):
+    return render(request, 'reservation_cancel.html')

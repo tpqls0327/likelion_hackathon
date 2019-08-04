@@ -411,6 +411,17 @@ body {
         color: #000;
         border-radius: 0.5em 0.5em 0.5em 0.5em;
     }
+
+    .road-search-btn{
+        margin-top: 5px;
+        height: 50px;
+        width: 375px;
+        background: white;
+        border: 2px solid black;
+        color: #000;
+        border-radius: 0.5em 0.5em 0.5em 0.5em;
+    }
+
     .notice1{
         height:80px;
         width: 370px;
@@ -503,7 +514,6 @@ body {
         background: #ffeb00;
         border-radius: 0.5em 0.5em 0.5em 0.5em;
     }
-
     /* sign up */
 
     .Signup-title{

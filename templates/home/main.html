@@ -8,26 +8,15 @@
     <div class="search">
         
 
-<<<<<<< HEAD
-        <form action ="{% url 'search' %}" method="GET">
-            <input class="search-txt" type="text" name="address" id="sample6_address" placeholder="지역을 입력해주세요">
-            <input class="search-btn" type="submit" value="찾기!">
-=======
-        <form action ="{% url 'result' %}" method="GET">
-            <input class="search-txt" type="text" name="" id="sample6_address" placeholder="지역을 입력해주세요">
+        <form action ="{% url 'search' %}" method="POST">
+                {% csrf_token %}
+            <input class="search-txt" type="text" name="this_ad" id="sample6_address" placeholder="지역을 입력해주세요">
             <input class="search-btn" type="submit" value="찾기!"><br>
             <input class="road-search-btn" type="button" onclick="sample6_execDaumPostcode()" value="도로명 주소로 검색하기"><br>
->>>>>>> 각종페이지추가, manager앱추가, css수정
         </form>
 
     </div>
 
-<<<<<<< HEAD
-
-    <input type="button" onclick="sample6_execDaumPostcode()" value="검색"><br>
-    
-=======
->>>>>>> 각종페이지추가, manager앱추가, css수정
     <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
     <script>
         function sample6_execDaumPostcode() {
