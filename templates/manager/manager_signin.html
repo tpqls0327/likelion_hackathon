@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+    <div class="Login-title">
+        <a>사장님 로그인</a>
+    </div>
+
+    <div class="form">
+        <div class="form1">
+
+            <form method='POST' action="{% url 'signin' %}">
+            {% csrf_token %}
+            <label for="exampleInputEmail1">계정(이메일)</label><br>
+            <input type="email" class="Login-id" name="username" placeholder="ID"><br>
+            <label for="exampleInputPassword">비밀번호</label><br>
+            <input type="password" class="Login-pw" name="password" placeholder="PassWord">
+            <div class="Login-btn1">
+                <button type="submit" class="Login-btn">로그인</button>
+            </div>
+            <div class="Login-btn1">
+                    <button type="submit" class="Login-btn">회원가입</button>
+                </div>
+        </form>
+
+        </div>
+    </div>
+    
+{% endblock %}

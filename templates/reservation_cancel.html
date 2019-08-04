@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<div class="ReservationOK">
+        <div class="ReservationOK-title">
+                <i class="fas fa-check fa-4x" style="color: rgb(116, 194, 63)"></i><br>
+                <a>예약취소가 완료되었습니다.</a>
+            </div>
+        <div class="main-btn">
+            <button onclick = "location.href ='{% url 'home' %}'" class="main-btn1">메인으로 돌아가기</button>
+        </div>
+    </div>
+{% endblock %}

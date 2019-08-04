@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from account_user.models import Restaurant 
+from django.db.models import Q
 
 def result(request):
     return render(request, 'result.html')
@@ -19,8 +20,7 @@ def info(request):
 def search(request):
     posts = list()
     target = request.GET['address']
-    things = Restaurant.objects.all()
-    for thing in things:
-        if (target in thing.shop_location_new) or (target in thing.shop_location_old):
-            posts.append(thing)
+    things = Restaurant.objects.filter(Q(shop_location_new __contains=target) | Q(shop_location_old__contains=target))
+    
+    posts.append(thing)
     return render(request, 'result(real).html', {'posts',posts,})

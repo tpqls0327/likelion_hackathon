@@ -21,15 +21,45 @@
             </div>
             <div class="GLogin-btn1">
                 <button type="button" class="GLogin-btn">Google 계정으로 로그인하기</button>
+            <!--
             </div>
             <div class="KLogin-btn1">
                 <button type="button" class="KLogin-btn" href="#">카카오 계정으로 로그인하기</button>
             </div>
+<<<<<<< HEAD
         </form>
 
 
 <!-- 이메일: res.kakao_account.email, 고유키: res.id, 이름: res.property.nickname -->
 
+=======
+            -->
+        </form>
+        <!-- <a id="custom-login-btn" href="javascript:loginWithKakao()">
+                <img src="//mud-kage.kakao.com/14/dn/btqbjxsO6vP/KPiGpdnsubSq3a0PHEGUK1/o.jpg" width="300"/>
+                </a>
+                <script type='text/javascript'>
+                  //<![CDATA[
+                    // 사용할 앱의 JavaScript 키를 설정해 주세요.
+                    Kakao.init('e4920a50b4a9f130fe8a503e4ac5b97f');
+                    function loginWithKakao() {
+                      // 로그인 창을 띄웁니다.
+                    Kakao.Auth.login({
+                        success: function(authObj) {
+                        alert(JSON.stringify(authObj));
+                        },
+                        fail: function(err) {
+                        alert(JSON.stringify(err));
+                        }
+                    });
+                    };
+                  //]]>
+                </script> -->
+
+<!-- 이메일: res.kakao_account.email, 고유키: res.id, 이름: res.property.nickname -->
+
+
+>>>>>>> 각종페이지추가, manager앱추가, css수정
                 <a id="kakao-login-btn"></a>
 <script type='text/javascript'>
   //<![CDATA[
@@ -43,6 +73,7 @@
         Kakao.API.request({
         url: '/v2/user/me',
         success: function(res) {
+<<<<<<< HEAD
         alert(JSON.stringify(res));
         var form = document.createElement("form");
             form.setAttribute("charset","UTF-8");
@@ -53,6 +84,11 @@
             form.setAttribute("action","kakaologin/");
             form.submit();
             // location.href="http://127.0.0.1:8000/accounts/kakaologin/" + test;
+=======
+        //    alert(JSON.stringify(res));
+            var test = (res.id +" "+ res.properties.nickname+" "+ res.kakao_account.email);
+            location.href="http://127.0.0.1:8000/accounts/kakaologin/" + test;
+>>>>>>> 각종페이지추가, manager앱추가, css수정
         },
         fail: function(error) {
             alert(JSON.stringify(error));
@@ -67,7 +103,10 @@
 </script>
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 각종페이지추가, manager앱추가, css수정
         </div>
     </div>
     
