@@ -4,7 +4,16 @@
     <div class="Signup-title">
         <a>회원가입</a>
     </div>
-    
+    <script type="text/javascript">
+        function check_only(chk){
+            var obj = document.getElementsByName("type");
+            for (var i = 0; i<obj.length; i++){
+                if(obj[i] != chk){
+                    obj[i].checked = false;
+                }
+            }
+        }
+    </script>
     <div class="signup-form">
         <div class="signup-form1">
                 <form method="POST" action="{% url 'signup'%}">
@@ -19,6 +28,9 @@
             <input type="password" class="Signup-pw" name="password1"><br>
             <label for="InputPassword1" style="padding-top: 10px;">비밀번호(확인)</label><br>
             <input type="password" class="Signup-pw1" name="password2">
+            <input type="checkbox" name = "type" value = "1" onclick="javascript:check_only(this)">사장님
+            <input type="checkbox" name = "type" value = "0" onclick="javascript:check_only(this)">손님
+            
         </div>
         <div class="Signup-btn1">
             <button type="submit" class="Signup-btn">회원가입</button>
