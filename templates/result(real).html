@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+
+<!-- 화이팅 -->
+
+<div class="wrapper">
+
+    
+    
+
+    {% for post in posts %}
+    
+                 <div class="card" onclick = "location.href = '{% url 'info' %}'">
+                    <img src="{% static 'img/1.png' %}" alt="TestImg" style="width:100%">
+                    <h4 style="padding-left: 3px;">{{post.shopname}}</h4>
+                    <p style="padding-left: 3px;">{{post.shop_description}}</p>
+                </div>
+    
+    {% endfor %}
+               
+                
+
+            </div>
+
+{% endblock %}

@@ -43,9 +43,13 @@ class Restaurant(models.Model):
     food_img3 = models.CharField(max_length=250, blank=True, null=True)
     shop_description = models.TextField(blank=True, null=True)
     food_description = models.TextField(blank=True, null=True)
-    shop_location = models.CharField(max_length=250, blank=True, null=True)
+    shop_location_new = models.CharField(max_length=250, blank=True, null=True)
+    shop_location_old = models.CharField(max_length=250, blank=True, null=True)
     shop_comments = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
-        db_table = 'restaurant'
+        db_table = 'Restaurant'
+        
+class nothing():
+    nothing = 0
+        

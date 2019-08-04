@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from account_user.models import Restaurant 
 
 def result(request):
     return render(request, 'result.html')
@@ -14,3 +15,12 @@ def reservation_ok(request):
 
 def info(request):
     return render(request, 'info.html')
+
+def search(request):
+    posts = list()
+    target = request.GET['address']
+    things = Restaurant.objects.all()
+    for thing in things:
+        if (target in thing.shop_location_new) or (target in thing.shop_location_old):
+            posts.append(thing)
+    return render(request, 'result(real).html', {'posts',posts,})

@@ -43,7 +43,7 @@
         Kakao.API.request({
         url: '/v2/user/me',
         success: function(res) {
-        //    alert(JSON.stringify(res));
+        alert(JSON.stringify(res));
         var form = document.createElement("form");
             form.setAttribute("charset","UTF-8");
             form.setAttribute("id",res.id);
