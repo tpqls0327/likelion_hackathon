@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>가게 관리</h1> <br>
+<a>{{user.username}} 사장님의 가게 정보 입니다!</a><br>
+<a href="#">사장님 정보 수정하기</a><br>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+        <th scope="col"></th>
+        <th scope="col">매장명</th>
+        <th scope="col">예약자 현황</th>
+        <th scope="col">매장 수정하기</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <th scope="row">1</th>
+        <td><a>OO 고깃집</a></td>
+        <td><a href="{% url 'management_reservation_list' %}">확인하기</a></td>
+        <td><a href="{% url 'management_modify' %}">수정하기</a></td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

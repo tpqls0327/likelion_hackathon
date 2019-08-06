@@ -6,3 +6,12 @@ from django.contrib import auth
 
 def manager_signin(request):
     return render(request, 'manager/manager_signin.html')
+
+def management(request):
+    return render(request, 'manager/management.html')
+
+def management_reservation_list(request):
+    return render(request, 'manager/management_reservation_list.html')
+
+def management_modify(request):
+    return render(request, 'manager/management_modify.html')
