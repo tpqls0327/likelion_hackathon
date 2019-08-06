@@ -22,9 +22,9 @@ body {
     }
     .search{
         margin: auto;
-        padding-top: 140px;
         float: center;
         text-align: center;
+        padding-top: 50px;
     }
     .search-txt{
         height: 50px;
@@ -416,16 +416,15 @@ body {
     }
     .title{
         font-size:50px;
-        
     }
     .sub-title{
         font-size: 20px;
     }
     .search{
         margin: auto;
-        padding-top: 140px;
         float: center;
         text-align: center;
+        padding-top: 50px;
     }
     .search-txt{
         height: 50px;

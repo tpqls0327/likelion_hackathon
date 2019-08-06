@@ -6,8 +6,6 @@
         <a class="sub-title">실시간 식당 예약 서비스</a>
     </div>
     <div class="search">
-        
-
         <form action ="{% url 'search' %}" method="POST">
                 {% csrf_token %}
             <input class="search-txt" type="text" name="this_ad" id="sample6_address" placeholder="지역을 입력해주세요">
