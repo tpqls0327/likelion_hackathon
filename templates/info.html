@@ -2,31 +2,37 @@
 {% block body %}
 {% load static %}
 <div class="Information">
-                <div class="Info-title">
-                        <a>가게정보</a>
-                    </div>
-                <div class="FoodPhoto">
-                    <img src="{% static 'img/TestImg.png' %}" alt="#" style="width: 50%;">
-                </div>
-                <div class="Reservation-btn">
-                    <button type="submit" onclick = "location.href = '{% url 'reservation' %}'" class="Reservation-btn1">예약하기</button>
-                </div>
-                <div class="Introduction">
-                    <h5>가게소개</h5>
-                    <a>이부분은 가게를 소개하는 부분입니다.</a>
-                </div>
-                <div class="FoodMenu">
-                    <h5>대표메뉴</h5>
-                    <ol>메뉴1</ol>
-                    <ol>메뉴2</ol>
-                    <ol>메뉴3</ol>
-                </div>
-                <div class="Location">
-                    <h5>가게위치소개부분(지도API이용)</h5>
-                </div>
-                <div class="Review">
-                    <h5>리뷰</h5>
-                    <a>이부분이 리뷰하는 부분</a>
-                </div>
-            </div>
+    <div class="Info-title">
+            <a>가게정보</a>
+    </div>
+    
+    <div class="FoodPhoto">
+        <img src="{% static 'img/TestImg.png' %}" alt="#" style="width: 50%;">
+    </div>
+    
+    <div class="Reservation-btn">
+        <button type="submit" onclick = "location.href = '{% url 'reservation' %}'" class="Reservation-btn1">예약하기</button>
+    </div>
+    
+    <div class="Introduction">
+        <h5>가게소개</h5>
+        <a>이부분은 가게를 소개하는 부분입니다.</a>
+    </div>
+    
+    <div class="FoodMenu">
+        <h5>대표메뉴</h5>
+        <ol>메뉴1</ol>
+        <ol>메뉴2</ol>
+        <ol>메뉴3</ol>
+    </div>
+    
+    <div class="Location">
+        <h5>가게위치소개부분(지도API이용)</h5>
+    </div>
+    
+    <div class="Review">
+        <h5>리뷰</h5>
+        <a>이부분이 리뷰하는 부분</a>
+    </div>
+</div>
 {% endblock %}

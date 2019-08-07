@@ -399,6 +399,32 @@ body {
     }
 }
 
+/* management_modify */
+
+.modify{
+    margin:auto;
+    width: 600px;
+    padding-bottom: 30px;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.store_name1{
+    width: 80%;
+}
+
+.store_intro1{
+    width: 80%;
+    height: 100px;
+}
+
+.mod_location1{
+    width: 80%;
+}
+/*---------------------------------------------------------------------------*/
+
+
+
+
 @media(max-width:990px) {
 
         /* main */
@@ -797,4 +823,26 @@ body {
         background: #f8f9fa;
         border-radius: 0.5em 0.5em 0.5em 0.5em;
     }
+}
+
+/* management_modify */
+
+.modify{
+    margin:auto;
+    width: 600px;
+    padding-bottom: 30px;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.store_name1{
+    width: 80%;
+}
+
+.store_intro1{
+    width: 80%;
+    height: 100px;
+}
+
+.mod_location1{
+    width: 80%;
 }
