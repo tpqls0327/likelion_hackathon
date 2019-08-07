@@ -23,5 +23,7 @@
 ## 8/6 17:55
 1. 사장님 페이지 추가
  * management.html(매장 관리페이지_예약자현황확인,매장수정하기 기능)
- * management_modify.html(매장 수정페이지)
+ * management_modify.html(매장 수정페이지)  ==>css 추가 O
  * management_reservation_list.html(매장 관리페이지에서 예약자현황리스트 확인할수있는 페이지)
+ 
+ 
