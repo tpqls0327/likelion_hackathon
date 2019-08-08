@@ -26,4 +26,6 @@
  * management_modify.html(매장 수정페이지)  ==>css 추가 O
  * management_reservation_list.html(매장 관리페이지에서 예약자현황리스트 확인할수있는 페이지)
  
- 
+ ## 8/8 18:00
+ 1. 매장 등록 페이지 추가
+ * manager/Restaurant_register.html(매장 사진, 음식사진, 매장 주인정보 추가)
