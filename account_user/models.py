@@ -40,11 +40,11 @@ class User(AbstractUser):
 
 
 class Reservation(models.Model):
-    member_id = models.IntegerField(blank=True, null=True)
+    user = models.ForeignKey(User,on_delete=models.CASCADE, null = True)
     restaurant_id = models.IntegerField(blank=True, null=True)
     reser_sum = models.IntegerField(blank=True, null=True)
-    resr_status = models.CharField(max_length=1)
-    reser_time = models.DateTimeField(blank=True, null=True)
+    reser_date = models.CharField(max_length=20, null=True)
+    reser_time = models.CharField(max_length=20, null=True)
 
 class Restaurant(models.Model):
     shopname = models.CharField(max_length=20)

@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.models import User
 from account_user.models import User as User2
 from django.contrib import auth
-from account_user.models import Restaurant
+from account_user.models import Restaurant, Reservation
 from django.core.paginator import Paginator
 
 # Create your views here.
@@ -18,8 +18,13 @@ def management(request):
         
     return render(request, 'manager/management.html', {'things':things,})
 
-def management_reservation_list(request):
-    return render(request, 'manager/management_reservation_list.html')
+def management_reservation_list(request, restaurant_id):
+    somethings = Reservation.objects.all().filter(restaurant_id = restaurant_id)
+    paginator = Paginator(somethings,5)
+    page = request.GET.get('page')
+    things = paginator.get_page(page)
+
+    return render(request, 'manager/management_reservation_list.html', {'things':things,})
 
 def management_modify(request):
     if request.method =='POST':

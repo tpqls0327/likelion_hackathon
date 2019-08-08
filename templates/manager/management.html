@@ -20,8 +20,8 @@
         {% for thing in things %}
         <tr>
         <th scope="row"></th>
-        <td><a>{{thing.shopname}}</a></td>
-        <td><a href="{% url 'management_reservation_list' %}">확인하기</a></td>
+        <td><a href = "{% url 'info_real' thing.id %}">{{thing.shopname}}</a></td>
+        <td><a href="{% url 'management_reservation_list' thing.id %}">확인하기</a></td>
         <td><a href="{% url 'management_modify' %}">수정하기</a></td>
         </tr>
         {% endfor %}
@@ -29,19 +29,19 @@
     </tbody>
 </table>
 <div class = 'container'>
-        {%if things.has_previous %}
+        {% if things.has_previous %}
         <a href="?page=1">First</a>
         <a href="?page={{things.previous_page_number}}">Previous</a>
-        {%endif%}
+        {% endif %}
     
         <span>{{things.number}}</span>
         <span>of</span>
         <span>{{things.paginator.num_pages}}</span>
     
-        {%if posts.has_next %}
+        {% if things.has_next %}
         <a href="?page={{things.next_page_number}}">Next</a>
         <a href="?page={{things.paginator.num_pages}}">Last</a>
-        {%endif%}
+        {% endif %}
         <br>
         <br>
     </div>
