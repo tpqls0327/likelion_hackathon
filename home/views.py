@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 from account_user.models import Restaurant 
 from django.db.models import Q
 
@@ -19,8 +19,8 @@ def info(request):
 
 def search(request):
     target = request.POST["this_ad"]
-    posts = {Restaurant.objects.filter(Q(shop_location_new__contains=target) | Q(shop_location_old__contains=target))}
-    
+    posts = {Restaurant.objects.filter(shop_location_new__contains=target)}
+    print(posts)
     return render(request, 'result(real).html', {'posts':posts})
 
 def reservation_list(request):

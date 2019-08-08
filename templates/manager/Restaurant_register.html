@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script>
+    function sample6_execDaumPostcode1() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                var addr = ''; // 주소 변수
+                var extraAddr = ''; // 참고항목 변수
+
+                //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                    addr = data.roadAddress;
+                } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                    addr = data.jibunAddress;
+                }
+                
+                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                document.getElementById("shop_location_new").value = addr;
+                // 커서를 상세주소 필드로 이동한다.
+                document.getElementById("shop_location_new").focus();
+            }
+        }).open();
+    }
+</script>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script>
+    function sample6_execDaumPostcode2() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                var addr = ''; // 주소 변수
+                var extraAddr = ''; // 참고항목 변수
+
+                //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                    addr = data.roadAddress;
+                } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                    addr = data.jibunAddress;
+                }
+                
+                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                document.getElementById("shop_location_old").value = addr;
+                // 커서를 상세주소 필드로 이동한다.
+                document.getElementById("shop_location_old").focus();
+            }
+        }).open();
+    }
+</script>
+
+<form method="POST" action = "{% url 'Restaurant_register' %}">
+    {% csrf_token %}
+    가게 이름 : <br>
+    <input type="text" name = "shopname"><br>
+    가게 이미지 <br>
+    <input type="file" accept="image/*" name = "profile_img">
+    <br>
+    음식1 이미지 <br>
+    <input type="file" accept="image/*" name = "food_img1"> <br>
+    음식2 이미지 <br>
+    <input type="file" accept="image/*" name = "food_img2"> <br>
+    음식3 이미지 <br>
+    <input type="file" accept="image/*" name = "food_img3"> <br>
+    가게 설명 : <br>
+    <input type="text" name = "shop_description"><br>
+    음식 설명 :<br>
+    <input type="text" name = "food_description"><br>
+    가게 신주소:<input type="button" onclick="sample6_execDaumPostcode1()" value="주소 찾기"><br>
+    <input type="text" name = "shop_location_new" id ="shop_location_new"><br>
+    가게 구주소:<input type="button" onclick="sample6_execDaumPostcode2()" value="주소 찾기"><br>
+    <input type="text" name = "shop_location_old" id = "shop_location_old"><br>
+    
+    <input type="submit" value = "가게 등록하기">
+
+
+</form>
+
+
+{% endblock %}

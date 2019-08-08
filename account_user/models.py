@@ -31,16 +31,16 @@ class Reservation(models.Model):
 
 class Restaurant(models.Model):
     shopname = models.CharField(max_length=20)
-    profile_img = models.CharField(max_length=250, blank=True, null=True)
-    food_img1 = models.CharField(max_length=250, blank=True, null=True)
-    food_img2 = models.CharField(max_length=250, blank=True, null=True)
-    food_img3 = models.CharField(max_length=250, blank=True, null=True)
+    profile_img = models.ImageField(blank=True, null=True)
+    food_img1 = models.ImageField(blank=True, null=True)
+    food_img2 = models.ImageField(blank=True, null=True)
+    food_img3 = models.ImageField(blank=True, null=True)
     shop_description = models.TextField(blank=True, null=True)
     food_description = models.TextField(blank=True, null=True)
     shop_location_new = models.CharField(max_length=250, blank=True, null=True)
     shop_location_old = models.CharField(max_length=250, blank=True, null=True)
     shop_comments = models.TextField(blank=True, null=True)
-        
+    shop_owner = models.ForeignKey(User,on_delete=models.CASCADE, null = True)
 class nothing():
     nothing = 0
         

@@ -8,12 +8,12 @@
     
     
 
-    {% for post in posts %}
+    {% for part in posts %}
     
                  <div class="card" onclick = "location.href = '{% url 'info' %}'">
                     <img src="{% static 'img/1.png' %}" alt="TestImg" style="width:100%">
-                    <h4 style="padding-left: 3px;">{{post.shopname}}</h4>
-                    <p style="padding-left: 3px;">{{post.shop_description}}</p>
+                    <h4 style="padding-left: 3px;">{{part.shopname}}</h4>
+                    <p style="padding-left: 3px;">{{part.shop_description}}</p>
                 </div>
     
     {% endfor %}
