@@ -21,22 +21,26 @@
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
 
-                    {% if user.is_authenticated %}
+                    {% if User.is_authenticated %}
                     <li class="nav-item active">
                             <a class="nav-link" href="{% url 'reservation_list' %}">예약현황 확인하기<span class="sr-only">(current)</span></a>
                         </li> 
-                    {% else %}
                     <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'manager_signin' %}">사장님메뉴<span class="sr-only">(current)</span></a>
-                    </li>    
+                            <a class="nav-link" href="{% url 'manager_signin' %}">사장님메뉴<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li>
+                            <br>
+                        </li>    
+                    {% else %}
+                    
                     {% endif %}
                 <li class="nav-item active">
                         <a class="nav-link" href="#">about<span class="sr-only">(current)</span></a>
                     </li>    
                     </ul>
                     <ul class="navbar-nav d-none d-lg-flex ml-2 order-3">
-                            {% if user.is_authenticated %}
-                            <li class="nav-item"><a class="nav-link" href="{% url 'reservation_list' %}">{{user.username}} 님!</a></li>
+                            {% if User.is_authenticated %}
+                            <li class="nav-item"><a class="nav-link" href="{% url 'reservation_list' %}">{{User.username}} 님!</a></li>
                             <li class="nav-item"><a class="nav-link" href="javascript:{document.getElementById('logout').submit()}">로그아웃</a></li>
                             <form id="logout" method="POST" action="{% url 'logout' %}">
                                 {% csrf_token %} <input type="hidden" />
@@ -49,8 +53,8 @@
                         <!-- 반응형 -->
                         <ul class="navbar-nav d-lg-none">
                             <li class="nav-item-divider"></li>
-                            {% if user.is_authenticated %}
-                            <li class="nav-item"><a class="nav-link" href="{% url 'reservation_list' %}">{{user.username}} 님!</a></li>
+                            {% if User.is_authenticated %}
+                            <li class="nav-item"><a class="nav-link" href="{% url 'reservation_list' %}">{{User.username}} 님!</a></li>
                             <li class="nav-item"><a class="nav-link" href="javascript:{document.getElementById('logout').submit()}">로그아웃</a></li>
                             {% else %}
                             <li class="nav-item"><a class="nav-link" href="{% url 'signin' %}">로그인</a></li>

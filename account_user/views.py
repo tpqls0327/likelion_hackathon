@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth.models import User
+from django.shortcuts import render, redirect, HttpResponse
+from account_user.models import User
+# from django.contrib.auth import login as django_login, logout as django_logout, authenticate
 from django.contrib import auth
-
+from .forms import LoginForm
 #def signin(request):
 #    return render(request, 'accounts/signin.html')
 
@@ -15,18 +16,42 @@ def signin(request):
         user = auth.authenticate(request, username=username, password=password)
         if user is not None:
             auth.login(request, user)
+            
+            print(user)
             return redirect('/')
         else:
             return render(request, 'accounts/signin.html', {'error': 'username or password is incorrect.'})
     else:
         return render(request, 'accounts/signin.html')
 
+# def signin_test(request):
+#     if request.method == 'POST':
+#         form = LoginForm(request.POST)
+        
+#         username = form['username']
+#         password = form['password']
+#         user = authenticate(
+#             username=username,
+#             password=password
+#         )
+#         if user is not None:
+#             print(user)
+#             django_login(request,user)
+#             return redirect('/')
+#         else :
+#             print('또망함')
+#             return HttpResponse(request, 'err')
+#     else:
+#         form = LoginForm()
+#         return render(request, 'accounts/signin(test).html', {'form':form})
+            
+
 def signup(request):
     if request.method == 'POST':
         if request.POST['password1'] == request.POST['password2']:
             user = User.objects.create_user(
                 request.POST['username'], password=request.POST['password1'])
-            user.profile.type = request.POST['type']
+            user.ty = request.POST['type']
             auth.login(request, user)
             return redirect('/')
     return render(request, 'accounts/signup.html')
