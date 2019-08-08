@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
-
 {% block body %}
 <h1>가게 관리</h1> <br>
 <a>{{user.username}} 사장님의 가게 정보 입니다!</a><br>
 <a href="#">사장님 정보 수정하기</a><br>
+<a href="{% url 'Restaurant_register' %}">매장 등록하기</a><br>
+
 
 <table class="table table-striped">
     <thead>
@@ -15,12 +16,34 @@
         </tr>
     </thead>
     <tbody>
+
+        {% for thing in things %}
         <tr>
-        <th scope="row">1</th>
-        <td><a>OO 고깃집</a></td>
+        <th scope="row"></th>
+        <td><a>{{thing.shopname}}</a></td>
         <td><a href="{% url 'management_reservation_list' %}">확인하기</a></td>
         <td><a href="{% url 'management_modify' %}">수정하기</a></td>
         </tr>
+        {% endfor %}
+
     </tbody>
 </table>
+<div class = 'container'>
+        {%if things.has_previous %}
+        <a href="?page=1">First</a>
+        <a href="?page={{things.previous_page_number}}">Previous</a>
+        {%endif%}
+    
+        <span>{{things.number}}</span>
+        <span>of</span>
+        <span>{{things.paginator.num_pages}}</span>
+    
+        {%if posts.has_next %}
+        <a href="?page={{things.next_page_number}}">Next</a>
+        <a href="?page={{things.paginator.num_pages}}">Last</a>
+        {%endif%}
+        <br>
+        <br>
+    </div>
+
 {% endblock %}

@@ -25,12 +25,13 @@ from django.dispatch import receiver
 class UserManager(BaseUserManager):
     def create_superuser(self, *args, **kwargs):
         return super().create_superuser(ty = '0', *args, **kwargs)
+    
     # def create_user(self, *args, **kwargs):
     #     return super().create_user(type = '0', *args, **kwargs)
 
 class User(AbstractUser):
 
-    ty = models.CharField(max_length=1, null = True)
+    ty = models.IntegerField(null = True)
 
     objects = UserManager()
 

@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
+from account_user.models import User
 from . import views
 
 
