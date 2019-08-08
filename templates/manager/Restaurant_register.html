@@ -5,7 +5,7 @@
 <script>
     function sample6_execDaumPostcode1() {
         new daum.Postcode({
-            oncomplete: function(data) {
+            oncomplete: function (data) {
                 // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
 
                 // 각 주소의 노출 규칙에 따라 주소를 조합한다.
@@ -19,7 +19,7 @@
                 } else { // 사용자가 지번 주소를 선택했을 경우(J)
                     addr = data.jibunAddress;
                 }
-                
+
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
                 document.getElementById("shop_location_new").value = addr;
                 // 커서를 상세주소 필드로 이동한다.
@@ -32,7 +32,7 @@
 <script>
     function sample6_execDaumPostcode2() {
         new daum.Postcode({
-            oncomplete: function(data) {
+            oncomplete: function (data) {
                 // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
 
                 // 각 주소의 노출 규칙에 따라 주소를 조합한다.
@@ -46,7 +46,7 @@
                 } else { // 사용자가 지번 주소를 선택했을 경우(J)
                     addr = data.jibunAddress;
                 }
-                
+
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
                 document.getElementById("shop_location_old").value = addr;
                 // 커서를 상세주소 필드로 이동한다.
@@ -56,30 +56,31 @@
     }
 </script>
 
-<form method="POST" action = "{% url 'Restaurant_register' %}">
-    {% csrf_token %}
-    가게 이름 : <br>
-    <input type="text" name = "shopname"><br>
-    가게 이미지 <br>
-    <input type="file" accept="image/*" name = "profile_img">
-    <br>
-    음식1 이미지 <br>
-    <input type="file" accept="image/*" name = "food_img1"> <br>
-    음식2 이미지 <br>
-    <input type="file" accept="image/*" name = "food_img2"> <br>
-    음식3 이미지 <br>
-    <input type="file" accept="image/*" name = "food_img3"> <br>
-    가게 설명 : <br>
-    <input type="text" name = "shop_description"><br>
-    음식 설명 :<br>
-    <input type="text" name = "food_description"><br>
-    가게 신주소:<input type="button" onclick="sample6_execDaumPostcode1()" value="주소 찾기"><br>
-    <input type="text" name = "shop_location_new" id ="shop_location_new"><br>
-    가게 구주소:<input type="button" onclick="sample6_execDaumPostcode2()" value="주소 찾기"><br>
-    <input type="text" name = "shop_location_old" id = "shop_location_old"><br>
-    
-    <input type="submit" value = "가게 등록하기">
+<div style="margin: auto; width: 60vw">
+    <form method="POST" action="{% url 'Restaurant_register' %}">
+        {% csrf_token %}
+        가게 이름 : <br>
+        <input type="text" name="shopname"><br>
+        가게 이미지 <br>
+        <input type="file" accept="image/*" name="profile_img">
+        <br>
+        음식1 이미지 <br>
+        <input type="file" accept="image/*" name="food_img1"> <br>
+        음식2 이미지 <br>
+        <input type="file" accept="image/*" name="food_img2"> <br>
+        음식3 이미지 <br>
+        <input type="file" accept="image/*" name="food_img3"> <br>
+        가게 설명 : <br>
+        <input type="text" name="shop_description"><br>
+        음식 설명 :<br>
+        <input type="text" name="food_description"><br>
+        가게 신주소:<input type="button" onclick="sample6_execDaumPostcode1()" value="주소 찾기"><br>
+        <input type="text" name="shop_location_new" id="shop_location_new"><br>
+        가게 구주소:<input type="button" onclick="sample6_execDaumPostcode2()" value="주소 찾기"><br>
+        <input type="text" name="shop_location_old" id="shop_location_old"><br>
 
+        <input type="submit" value="가게 등록하기">
+</div>
 
 </form>
 
