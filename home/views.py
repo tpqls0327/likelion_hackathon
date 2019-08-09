@@ -30,7 +30,6 @@ def reservation_ok(request):
 
 def info(request):
     return render(request, 'info.html')
-    
 def info_real(request, restaurant_id):
     info = Restaurant.objects.get(pk=restaurant_id)
     return render(request, 'info(real).html', {'info':info})
@@ -45,10 +44,12 @@ def search(request):
     return render(request, 'result(real).html', {'posts':posts})
 
 def reservation_list(request):
-    current_user_reservation_list = Reservation.objects.filter(user=request.user)
     return render(request, 'reservation_list.html')
 
 
 
 def reservation_cancel(request):
     return render(request, 'reservation_cancel.html')
+
+def about(request):
+    return render(request, 'about.html')

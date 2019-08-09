@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Jua|Noto+Sans+KR:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <meta charset="UTF-8">
@@ -36,7 +37,7 @@
                     
                     {% endif %}
                 <li class="nav-item active">
-                        <a class="nav-link" href="#">about<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{% url 'about' %}">about<span class="sr-only">(current)</span></a>
                     </li>    
                     </ul>
                     <ul class="navbar-nav d-none d-lg-flex ml-2 order-3">

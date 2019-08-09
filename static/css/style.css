@@ -466,7 +466,10 @@ body {
         width : 80%;
     }
     #shop-title{
+<<<<<<< HEAD
         font-family: 'Jua', sans-serif;
+=======
+>>>>>>> ccd1536236f0a50851f6a4d8b45cf68a0b7a953e
         text-align: center;
         padding: 30px;
     }
