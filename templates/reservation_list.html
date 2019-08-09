@@ -6,35 +6,37 @@
 <table class="table table-striped">
     <thead>
         <tr>
-        <th scope="col"></th>
-        <th scope="col">가게명</th>
-        <th scope="col">예약날짜</th>
-        <th scope="col">예약자명</th>
-        <th scope="col">예약 상태</th>
+            <th scope="col"></th>
+            <th scope="col">가게명</th>
+            <th scope="col">예약날짜</th>
+            <th scope="col">예약자명</th>
+            <th scope="col">예약 상태</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-        <th scope="row">1</th>
-        <td><a href="#">청진동해장국</a></td>
-        <td>19/07/15</td>
-        <td>홍길동</td>
-        <td>예약대기</td>
+        {% for reserv in current_user_reservation_list %}
+            <tr>
+                <th scope="row">{{reserv.restaurant_id}}</th>
+                <td><a href="#">{{reserv.restaurant_id}}</a></td>
+                <td>{{reserv.reser_date}}</td>
+                <td>{{reserv.username}}</td>
+                <td>예약대기</td>
+            </tr>
+        {% endfor %}
+        <!-- <tr>
+            <th scope="row">2</th>
+            <td><a href="#">맛있는고깃집 충장로점</a></td>
+            <td>19/07/20</td>
+            <td>홍길동</td>
+            <td>예약완료</td>
         </tr>
         <tr>
-        <th scope="row">2</th>
-        <td><a href="#">맛있는고깃집 충장로점</a></td>
-        <td>19/07/20</td>
-        <td>홍길동</td>
-        <td>예약완료</td>
-        </tr>
-        <tr>
-        <th scope="row">3</th>
-        <td><a href="#">청진동해장국</a></td>
-        <td>19/07/29</td>
-        <td>홍길동</td>
-        <td>예약완료</td>
-        </tr>
+            <th scope="row">3</th>
+            <td><a href="#">청진동해장국</a></td>
+            <td>19/07/29</td>
+            <td>홍길동</td>
+            <td>예약완료</td>
+        </tr> -->
     </tbody>
 </table>
 {% endblock %}
