@@ -38,15 +38,10 @@ def info_real(request, restaurant_id):
 
 def search(request):
     target = request.POST["this_ad"]
-<<<<<<< HEAD
-    posts = Restaurant.objects.filter(shop_location_new__contains=target)
-    print(posts)
-=======
     things = Restaurant.objects.filter(shop_location_new__contains=target)
     paginator = Paginator(things, 6)
     page = request.GET.get('page')
     posts = paginator.get_page(page)
->>>>>>> 7eac4b66fb8e5e5d3f91005bb1046408503294cd
     return render(request, 'result(real).html', {'posts':posts})
 
 def reservation_list(request):

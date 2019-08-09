@@ -5,7 +5,6 @@
 <!-- 화이팅 -->
 <div class="wrapper">
     {% for part in posts %}
-=======
     
                  <div class="card" onclick = "location.href = '{% url 'info_real' part.id %}'">
                     <img src="{{ part.profile_img.url }}" alt="TestImg" style="width:100%">
@@ -35,6 +34,5 @@
 </div>            
 
             </div>
->>>>>>> 7eac4b66fb8e5e5d3f91005bb1046408503294cd
 
 {% endblock %}

@@ -2,8 +2,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 @media(max-width: 100000px){
+    font-family: 'Noto Sans KR', sans-serif;
 
     /* main */
     .navbar{
@@ -18,6 +20,7 @@ body {
         font-size: 30px;
     }
     .title{
+        font-family: 'Jua', sans-serif;
         font-size:100px;
     }
     .search{
@@ -27,6 +30,7 @@ body {
         padding-top: 50px;
     }
     .search-txt{
+        font-family: 'Noto Sans KR', sans-serif;
         height: 50px;
         width: 300px;
         padding: 10px;
@@ -53,6 +57,7 @@ body {
     }
 
     .notice1{
+        font-family: 'Noto Sans KR', sans-serif;
         height:80px;
         width: 650px;
         margin: auto;
@@ -65,6 +70,7 @@ body {
     /* sign in */
 
     .Login-title{
+        font-family: 'Jua', sans-serif;
         margin:auto;
         padding-top:10px;
         font-size:50px;
@@ -84,6 +90,7 @@ body {
         background-color: #f8f9fa;
     }
     .Login-id{
+        font-family: 'Noto Sans KR', sans-serif;
         margin: auto;
         width: 300px;
         float: center;
@@ -93,6 +100,7 @@ body {
         border-radius: 0.5em 0.5em 0.5em 0.5em;
     }
     .Login-pw{
+        font-family: 'Noto Sans KR', sans-serif;
         margin: auto;
         width: 300px;
         float: center;
@@ -102,9 +110,11 @@ body {
         border-radius: 0.5em 0.5em 0.5em 0.5em;
     }
     .Login-btn1{
+        font-family: 'Noto Sans KR', sans-serif;
         padding-top: 30px;
     }
     .Login-btn{
+        font-family: 'Noto Sans KR', sans-serif;
         margin: auto;
         height: 40px;
         width: 300px;
@@ -150,6 +160,7 @@ body {
     /* sign up */
 
     .Signup-title{
+        font-family: 'Jua', sans-serif;
         margin:auto;
         padding-top:50px;
         font-size:50px;
@@ -157,6 +168,7 @@ body {
         float: center;
     }
     .signup-form{
+        font-family: 'Noto Sans KR', sans-serif;
         width:350px;
         margin: auto;
         padding-top: 10px;
@@ -165,11 +177,13 @@ body {
         background-color: #f8f9fa;
     }
     .signup-form1{
+        font-family: 'Noto Sans KR', sans-serif;
         margin: auto;
         padding: 10px 20px 10px 20px; 
         background-color: #f8f9fa;
     }
     .Signup-id{
+        font-family: 'Noto Sans KR', sans-serif;
         margin: auto;
         width: 300px;
         float: center;
@@ -179,6 +193,7 @@ body {
         border-radius: 0.5em 0.5em 0.5em 0.5em;
     }
     .Name{
+        font-family: 'Noto Sans KR', sans-serif;
         margin: auto;
         width: 300px;
         float: center;
@@ -188,6 +203,7 @@ body {
         border-radius: 0.5em 0.5em 0.5em 0.5em;
     }
     .Signup-pw{
+        font-family: 'Noto Sans KR', sans-serif;
         margin: auto;
         width: 300px;
         float: center;
@@ -197,6 +213,7 @@ body {
         border-radius: 0.5em 0.5em 0.5em 0.5em;
     }
     .Signup-pw1{
+        font-family: 'Noto Sans KR', sans-serif;
         margin: auto;
         width: 300px;
         float: center;
@@ -214,6 +231,7 @@ body {
 
     }
     .Signup-btn1{
+        font-family: 'Noto Sans KR', sans-serif;
         padding-top: 15px;
         padding-left: 20px;
     }
@@ -232,6 +250,7 @@ body {
     /* result */
 
     .Result-title{
+        font-family: 'Jua', sans-serif;
         margin: auto;
         width: 50%;
         font-size:50px;
@@ -397,51 +416,213 @@ body {
         background: #f8f9fa;
         border-radius: 0.5em 0.5em 0.5em 0.5em;
     }
+
+    /* management_modify */
+
+    .modify{
+        margin:auto;
+        width: 600px;
+        padding-bottom: 30px;
+        border-radius: 0.5em 0.5em 0.5em 0.5em;
+    }
+
+    .store_name1{
+        width: 80%;
+    }
+
+    .store_intro1{
+        width: 80%;
+        height: 100px;
+    }
+
+    .mod_location1{
+        width: 80%;
+    }
+
+    /* management */
+
+    .management{
+        margin: auto;
+        width: 60vw;
+    }
+
+    .register{
+        border: 1px solid #f8f9fa; 
+        float: center; 
+        text-align: center;
+    }
+
+    .register_right{
+        border: 1px solid #f8f9fa; 
+        float: right; 
+        width: 33%; 
+        text-align: right;
+    }
+
+
+    /* Restaurant_register */
+    .Restaurant_register_frame{
+        margin : auto;
+        width : 80%;
+    }
+    #shop-title{
+        font-family: 'Jua', sans-serif;
+        text-align: center;
+        padding: 30px;
+    }
+    
+    /* #shop-subtitle{
+        padding-top : 10px;
+        padding-left : 15px;
+        text-align: center;
+    } */
+
+    .shop{
+        float: left; 
+        width: 50%; 
+        padding-top : 10px;
+        padding-left : 15px;
+    }
+    .shop-name-frame{
+        padding-top : 10px;
+        padding-left : 15px;
+    }
+    .shop-name-input{
+        margin: auto;
+        width: 300px;
+        float: center;
+        text-align: left;
+        border: 2px solid black;
+        color: #000;
+        border-radius: 0.5em 0.5em 0.5em 0.5em;
+    }
+    .shop-img-frame{
+        padding-top : 10px;
+        padding-left : 15px;
+    }
+    .shop-img-btn{
+        margin-top: 5px;
+        height: 50px;
+        width: 375px;
+        background: white;
+        border: 2px solid black;
+        color: #000;
+        border-radius: 0.5em 0.5em 0.5em 0.5em;
+    }
+    .food-title{
+        padding-top : 10px;
+        padding-left : 15px;
+    }
+    .filebox {
+        padding-top : 10px;
+        padding-left : 15px;
+        height: 50px;
+    }
+    .filebox label {
+        padding-top : 10px;
+        padding-left : 15px;
+        display: inline-block;
+        padding: .5em .75em;
+        color:black;
+        font-size: inherit;
+        line-height: normal;
+        vertical-align: middle;
+        background-color: white;
+        cursor: pointer;
+        border: 2px solid black;
+        border-radius: .25em;
+    }
+    .filebox input[type="file"] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip:rect(0,0,0,0);
+        border: 0;
+    }
+    .food-img-frame{
+        padding-top : 10px;
+        padding-left : 15px;
+        float: right; 
+        width: 50%; 
+
+    }
+    .shop-info-frame{
+        padding-top : 10px;
+        padding-left : 15px;
+    }
+    .food-info-frame{
+        padding-top : 10px;
+        padding-left : 15px;
+    }
+    .shop-address-frame{
+        padding-top : 10px;
+        padding-left : 15px;
+    }
+
+    .new-address-btn{
+        margin-top: 5px;
+        height: 40px;
+        width: 100px;
+        background: white;
+        border: 2px solid black;
+        color: #000;
+        border-radius: 0.5em 0.5em 0.5em 0.5em;
+    }
+    .new-addredd-input{
+        margin-top: 5px;
+        height: 40px;
+        width: 100px;
+        background: white;
+        border: 2px solid black;
+        color: #000;
+        border-radius: 0.5em 0.5em 0.5em 0.5em;
+    }
+    .register-btn{
+        padding-top : 10px;
+        padding-left : 15px;
+        float: right;
+    }
+    .register-btn1{
+        background: white;
+        border: 2px solid black;
+        color: #000;
+        border-radius: 0.5em 0.5em 0.5em 0.5em;
+        height: 40px;
+        width: 160px;
+    }
+
+    /* page info */
+    .page-info{
+        width:50%;
+        margin: 10px;
+    }
+    #page-info-title{
+        font-family: 'Do Hyeon', sans-serif;
+        padding-left : 15px;
+    }
+    #page-info-make{
+        font-family: 'Noto Sans KR', sans-serif;
+        padding-left : 15px;
+    }
+    #page-info-make1{
+        font-family: 'Noto Sans KR', sans-serif;
+        padding-left : 15px;
+        padding-bottom: 50px;
+    }
+    #page-info-frontend{
+        font-family: 'Do Hyeon', sans-serif;
+        padding-left : 15px;
+    }
+    #page-info-backend{
+        font-family: 'Do Hyeon', sans-serif;
+        padding-top: 30px;
+        padding-left: 15px;
+    }
 }
 
-/* management_modify */
-
-.modify{
-    margin:auto;
-    width: 600px;
-    padding-bottom: 30px;
-    border-radius: 0.5em 0.5em 0.5em 0.5em;
-}
-
-.store_name1{
-    width: 80%;
-}
-
-.store_intro1{
-    width: 80%;
-    height: 100px;
-}
-
-.mod_location1{
-    width: 80%;
-}
-
-/* management */
-
-.management{
-    margin: auto;
-    width: 60vw;
-}
-
-.register{
-    border: 1px solid #f8f9fa; 
-    float: center; 
-    text-align: center;
-}
-
-.register_right{
-    border: 1px solid #f8f9fa; 
-    float: right; 
-    width: 33%; 
-    text-align: right;
-
-
-}
 
 /*---------------------------------------------------------------------------*/
 
@@ -597,6 +778,7 @@ body {
     /* sign up */
 
     .Signup-title{
+        font-family: 'Jua', sans-serif;
         margin:auto;
         padding-top:50px;
         font-size:50px;
@@ -604,6 +786,7 @@ body {
         float: center;
     }
     .signup-form{
+        font-family: 'Noto Sans KR', sans-serif;
         height:none;
         width:400px;
         margin: auto;
@@ -613,10 +796,12 @@ body {
         background: #f8f9fa;;
     }
     .signup-form1{
+        font-family: 'Noto Sans KR', sans-serif;
         margin: auto;
         padding: 10px 20px 10px 20px;
     }
     .Signup-id{
+        font-family: 'Noto Sans KR', sans-serif;
         margin: auto;
         width: 300px;
         float: center;
@@ -626,6 +811,7 @@ body {
         border-radius: 0.5em 0.5em 0.5em 0.5em;
     }
     .Name{
+        font-family: 'Noto Sans KR', sans-serif;
         margin: auto;
         width: 300px;
         float: center;
@@ -635,6 +821,7 @@ body {
         border-radius: 0.5em 0.5em 0.5em 0.5em;
     }
     .Signup-pw{
+        font-family: 'Noto Sans KR', sans-serif;
         margin: auto;
         width: 300px;
         float: center;
@@ -644,6 +831,7 @@ body {
         border-radius: 0.5em 0.5em 0.5em 0.5em;
     }
     .Signup-pw1{
+        font-family: 'Noto Sans KR', sans-serif;
         margin: auto;
         width: 300px;
         float: center;
@@ -679,6 +867,7 @@ body {
     /* result */
 
     .Result-title{
+        font-family: 'Jua', sans-serif;
         font-size:50px;
         padding-left: 10px;
         padding-bottom: 10px;
@@ -872,6 +1061,7 @@ body {
         width : 80%;
     }
     #shop-title{
+        font-family: 'Jua', sans-serif;
         padding-top : 10px;
         padding-left : 15px;
     }
@@ -954,12 +1144,6 @@ body {
         padding-left : 15px;
     }
 
-<<<<<<< HEAD
-.management{
-    margin: auto;
-    width: 60vw;
-}
-=======
     .new-address-btn{
         margin-top: 5px;
         height: 40px;
@@ -991,4 +1175,3 @@ body {
         width: 160px;
     }
 }
->>>>>>> origin

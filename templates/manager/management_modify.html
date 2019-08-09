@@ -14,16 +14,19 @@
 
     <div class="mod_store">
         <div class="store_name">
+
+            <form action = "{% url 'management_modify' thing.id %}" method="POST">
+                {% csrf_token %}
             <a>매장명</a>
             <p>매장명을 수정할수 있는 부분입니다.</p>
-            <input type="text" class="store_name1" name="store_name" placeholder="매장명 입력">
+            <input type="text" class="store_name1"value="{{thing.shopname}}" name="shopname" placeholder="매장명 입력">
             <br>
         </div>
         <br>
         <div class="store_intro">
             <a>매장 소개</a>
             <p>가게소개을 할수있는 부분입니다.</p>
-            <input type="text" class="store_intro1" name="store_intro">
+            <input type="text" class="store_intro1" value="{{thing.shop_description}}" name="shop_description">
         </div>
         <br>
     </div>
@@ -44,13 +47,17 @@
     <div class="mod_location">
         <a>가게 위치 소개</a>
         <p>가게 위치를 수정할수 있는 부분입니다.</p>
-        <input type="text" class="mod_location1" name="mod_location" placeholder="주소 입력">
+        <input type="text" class="mod_location1" name="shop_location_new" value="{{thing.shop_location_new}}" placeholder="주소 입력">
         <div class="button">
             <a href="#">지도 등록하기</a><br>
         </div>
         <!--지도 API 들어가는 부분-->
         <a>지도 API 들어가는 부분</a> <br>
     </div>
+    <input type="submit" value="수정하기">
+</form>
+    <input type="submit" value ="취소하기" >
+
 </div>
 <a href="{% url 'management' %}">수정완료</a> <a href="#">취소하기</a>
 {% endblock %}
