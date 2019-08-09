@@ -56,64 +56,33 @@
     }
 </script>
 
-<div class=Restaurant_register_frame>
+<div style="margin: auto; width: 60vw">
     <form method="POST" action="{% url 'Restaurant_register' %}">
         {% csrf_token %}
-        <h2 id=shop-title>매장등록하기</h2>
-        <a id=shop-subtitle>매장을 등록해주세요!</a>
-        <p class=shop-name-frame>
-        <a class=shop-name>가게이름</a><br>
-            <input class="shop-name-input" type="text" style="width: 400px;" name="shopname"><br>
-        </p>
-        <p class=shop-img-frame>
-            <a>가게이미지 등록하기</a><br>
-            <div class="filebox">
-                <label for="profile_img">업로드</label>
-                <input type="file" id="profile_img" name="profile_img">
-            </div>
-            <!--<input class="shop-img-btn"type="file" accept="image/*" name="profile_img">-->
-        </p>
-        <p class=food-img-frame>
-            <a>음식 이미지 등록하기</a><br>
-            <a class=food-title>음식1 이미지</a> <br>
-            <div class="filebox">
-                <label for="food_img1">업로드</label>
-                <input type="file" id="food_img1" name="food_img1">
-            </div>
-            <!--<input type="file" accept="image/*" name="food_img1"> <br>-->
-            <a class=food-title>음식2 이미지</a> <br>
-            <div class="filebox">
-                <label for="food_img2">업로드</label>
-                <input type="file" id="food_img2" name="food_img1">
-            </div>
-            <!--<input type="file" accept="image/*" name="food_img2"> <br>-->
-            <a class=food-title>음식3 이미지</a> <br>
-            <div class="filebox">
-                <label for="food_img3">업로드</label>
-                <input type="file" id="food_img3" name="food_img1">
-            </div>
-            <!--<input type="file" accept="image/*" name="food_img3"> <br>-->
-        </p>
-        <p class=shop-info-frame>
-            <a>가게 설명</a><br>
-            <textarea name="shop_description" style="width: 400px; height:200px; border: 2px solid black; border-radius: 0.5em; resize:none;"></textarea>
-        </p>
-        <p class=food-info-frame>
-            <a>음식 설명</a><br>
-            <textarea name="food_description" style="width: 400px; height:200px;  border: 2px solid black; border-radius: 0.5em; resize:none;"></textarea>
-        </p>
-        <p class=shop-address-frame>
-            <a>가게 신주소 등록하기</a>
-            <input class="new-address-btn" type="button" onclick="sample6_execDaumPostcode1()" value="주소 찾기"><br>
-            <input class="new-addredd-input" type="text" style="width: 400px;" name="shop_location_new" id="shop_location_new"><br>
-            <a>가게 구주소 등록하기</a>
-            <input class="new-address-btn" type="button" onclick="sample6_execDaumPostcode2()" value="주소 찾기"><br>
-            <input class="new-addredd-input" type="text" style="width: 400px;" name="shop_location_old" id="shop_location_old">
-        </p>
-        <div class="register-btn">
-            <input class="register-btn1" type="submit" value="가게 등록하기">
-        </div>
-    </form>
+        가게 이름 : <br>
+        <input type="text" name="shopname"><br>
+        가게 이미지 <br>
+        <input type="file" accept="image/*" name="profile_img">
+        <br>
+        음식1 이미지 <br>
+        <input type="file" accept="image/*" name="food_img1"> <br>
+        음식2 이미지 <br>
+        <input type="file" accept="image/*" name="food_img2"> <br>
+        음식3 이미지 <br>
+        <input type="file" accept="image/*" name="food_img3"> <br>
+        가게 설명 : <br>
+        <input type="text" name="shop_description"><br>
+        음식 설명 :<br>
+        <input type="text" name="food_description"><br>
+        가게 신주소:<input type="button" onclick="sample6_execDaumPostcode1()" value="주소 찾기"><br>
+        <input type="text" name="shop_location_new" id="shop_location_new"><br>
+        가게 구주소:<input type="button" onclick="sample6_execDaumPostcode2()" value="주소 찾기"><br>
+        <input type="text" name="shop_location_old" id="shop_location_old"><br>
+
+        <input type="submit" value="가게 등록하기">
 </div>
+
+</form>
+
 
 {% endblock %}
