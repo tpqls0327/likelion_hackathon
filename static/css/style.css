@@ -428,6 +428,21 @@ body {
     width: 60vw;
 }
 
+.register{
+    border: 1px solid #f8f9fa; 
+    float: center; 
+    text-align: center;
+}
+
+.register_right{
+    border: 1px solid #f8f9fa; 
+    float: right; 
+    width: 33%; 
+    text-align: right;
+
+
+}
+
 /*---------------------------------------------------------------------------*/
 
 
