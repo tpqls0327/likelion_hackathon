@@ -15,6 +15,7 @@ urlpatterns = [
     path('search/', views.search, name="search"),
     path('reservation_list/', views.reservation_list, name = "reservation_list"),
     path('reservation_cancel/', views.reservation_cancel, name = "reservation_cancel"),
+    path('about/', views.about, name = "about"),
 
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 #accounts/login/social/naver/callback/

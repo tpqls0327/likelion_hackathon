@@ -30,7 +30,6 @@ def reservation_ok(request):
 
 def info(request):
     return render(request, 'info.html')
-    
 def info_real(request, restaurant_id):
     info = Restaurant.objects.get(pk=restaurant_id)
     return render(request, 'info(real).html', {'info':info})
@@ -38,22 +37,19 @@ def info_real(request, restaurant_id):
 
 def search(request):
     target = request.POST["this_ad"]
-<<<<<<< HEAD
-    posts = Restaurant.objects.filter(shop_location_new__contains=target)
-    print(posts)
-=======
     things = Restaurant.objects.filter(shop_location_new__contains=target)
     paginator = Paginator(things, 6)
     page = request.GET.get('page')
     posts = paginator.get_page(page)
->>>>>>> 7eac4b66fb8e5e5d3f91005bb1046408503294cd
     return render(request, 'result(real).html', {'posts':posts})
 
 def reservation_list(request):
-    current_user_reservation_list = Reservation.objects.filter(user=request.user)
     return render(request, 'reservation_list.html')
 
 
 
 def reservation_cancel(request):
     return render(request, 'reservation_cancel.html')
+
+def about(request):
+    return render(request, 'about.html')
