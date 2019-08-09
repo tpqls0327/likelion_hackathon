@@ -823,26 +823,143 @@ body {
         background: #f8f9fa;
         border-radius: 0.5em 0.5em 0.5em 0.5em;
     }
+
+    /* management_modify */
+
+    .modify{
+        margin:auto;
+        width: 600px;
+        padding-bottom: 30px;
+        border-radius: 0.5em 0.5em 0.5em 0.5em;
+    }
+    .store_name1{
+        width: 80%;
+    }
+    .store_intro1{
+        width: 80%;
+        height: 100px;
+    }
+    .mod_location1{
+        width: 80%;
+    }
+
+    /* Restaurant_register */
+    .Restaurant_register_frame{
+        margin : auto;
+        width : 80%;
+    }
+    #shop-title{
+        padding-top : 10px;
+        padding-left : 15px;
+    }
+    #shop-subtitle{
+        padding-top : 10px;
+        padding-left : 15px;
+    }
+    .shop-name-frame{
+        padding-top : 10px;
+        padding-left : 15px;
+    }
+    .shop-name-input{
+        margin: auto;
+        width: 300px;
+        float: center;
+        text-align: left;
+        border: 2px solid black;
+        color: #000;
+        border-radius: 0.5em 0.5em 0.5em 0.5em;
+    }
+    .shop-img-frame{
+        padding-top : 10px;
+        padding-left : 15px;
+    }
+    .shop-img-btn{
+        margin-top: 5px;
+        height: 50px;
+        width: 375px;
+        background: white;
+        border: 2px solid black;
+        color: #000;
+        border-radius: 0.5em 0.5em 0.5em 0.5em;
+    }
+    .food-title{
+        padding-top : 10px;
+        padding-left : 15px;
+    }
+    .filebox {
+        padding-top : 10px;
+        padding-left : 15px;
+    }
+    .filebox label {
+        padding-top : 10px;
+        padding-left : 15px;
+        display: inline-block;
+        padding: .5em .75em;
+        color:black;
+        font-size: inherit;
+        line-height: normal;
+        vertical-align: middle;
+        background-color: white;
+        cursor: pointer;
+        border: 2px solid black;
+        border-radius: .25em;
+    }
+    .filebox input[type="file"] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip:rect(0,0,0,0);
+        border: 0;
+    }
+    .food-img-frame{
+        padding-top : 10px;
+        padding-left : 15px;
+    }
+    .shop-info-frame{
+        padding-top : 10px;
+        padding-left : 15px;
+    }
+    .food-info-frame{
+        padding-top : 10px;
+        padding-left : 15px;
+    }
+    .shop-address-frame{
+        padding-top : 10px;
+        padding-left : 15px;
+    }
+
+    .new-address-btn{
+        margin-top: 5px;
+        height: 40px;
+        width: 100px;
+        background: white;
+        border: 2px solid black;
+        color: #000;
+        border-radius: 0.5em 0.5em 0.5em 0.5em;
+    }
+    .new-addredd-input{
+        margin-top: 5px;
+        height: 40px;
+        width: 100px;
+        background: white;
+        border: 2px solid black;
+        color: #000;
+        border-radius: 0.5em 0.5em 0.5em 0.5em;
+    }
+    .register-btn{
+        padding-top : 10px;
+        padding-left : 15px;
+    }
+    .register-btn1{
+        background: white;
+        border: 2px solid black;
+        color: #000;
+        border-radius: 0.5em 0.5em 0.5em 0.5em;
+        height: 40px;
+        width: 160px;
+    }
 }
 
-/* management_modify */
-
-.modify{
-    margin:auto;
-    width: 600px;
-    padding-bottom: 30px;
-    border-radius: 0.5em 0.5em 0.5em 0.5em;
-}
-
-.store_name1{
-    width: 80%;
-}
-
-.store_intro1{
-    width: 80%;
-    height: 100px;
-}
-
-.mod_location1{
-    width: 80%;
-}
