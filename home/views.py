@@ -41,6 +41,7 @@ def search(request):
     return render(request, 'result(real).html', {'posts':posts})
 
 def reservation_list(request):
+    current_user_reservation_list = Reservation.objects.filter(user=request.user)
     return render(request, 'reservation_list.html')
 
 
