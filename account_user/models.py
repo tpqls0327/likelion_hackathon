@@ -42,6 +42,7 @@ class User(AbstractUser):
 class Reservation(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE, null = True)
     restaurant_id = models.IntegerField(blank=True, null=True)
+    restaurant_name = models.CharField(max_length=20, null=True)
     reser_sum = models.IntegerField(blank=True, null=True)
     reser_date = models.CharField(max_length=20, null=True)
     reser_time = models.CharField(max_length=20, null=True)
@@ -58,10 +59,6 @@ class Restaurant(models.Model):
     shop_location_old = models.CharField(max_length=250, blank=True, null=True)
     shop_comments = models.TextField(blank=True, null=True)
     shop_owner = models.ForeignKey(User,on_delete=models.CASCADE, null = True)
-
-    def __str__(self):
-        return self.shopname
-        
 class nothing():
     nothing = 0
         

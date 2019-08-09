@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponse
 from account_user.models import User
+
 # from django.contrib.auth import login as django_login, logout as django_logout, authenticate
 from django.contrib import auth
 from .forms import LoginForm
@@ -48,10 +49,13 @@ def signin_test(request):
 def signup(request):
     if request.method == 'POST':
         if request.POST['password1'] == request.POST['password2']:
-            user = User.objects.create_user(
-                request.POST['username'], password=request.POST['password1'], ty = request.POST['type'])
-            auth.login(request, user)
-            return redirect('/')
+            try:
+                user = User.objects.create_user(
+                    request.POST['username'], password=request.POST['password1'], ty = request.POST['type'])
+                auth.login(request, user)
+                return redirect('/')
+            except:
+                return render(request, 'accounts/signup.html')
     return render(request, 'accounts/signup.html')
 
 def logout(request):
