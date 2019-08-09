@@ -29,6 +29,7 @@ def reservation_ok(request):
 
 def info(request):
     return render(request, 'info.html')
+    
 def info_real(request, restaurant_id):
     info = Restaurant.objects.get(pk=restaurant_id)
     return render(request, 'info(real).html', {'info':info})
@@ -36,7 +37,7 @@ def info_real(request, restaurant_id):
 
 def search(request):
     target = request.POST["this_ad"]
-    posts = {Restaurant.objects.filter(shop_location_new__contains=target)}
+    posts = Restaurant.objects.filter(shop_location_new__contains=target)
     print(posts)
     return render(request, 'result(real).html', {'posts':posts})
 

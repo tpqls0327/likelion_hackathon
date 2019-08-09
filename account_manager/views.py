@@ -16,7 +16,7 @@ def management(request):
     page = request.GET.get('page')
     things = paginator.get_page(page)
         
-    return render(request, 'manager/management.html', {'things':things,})
+    return render(request, 'manager/management.html', {'things':things})
 
 def management_reservation_list(request, restaurant_id):
     somethings = Reservation.objects.all().filter(restaurant_id = restaurant_id)
