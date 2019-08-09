@@ -420,6 +420,14 @@ body {
 .mod_location1{
     width: 80%;
 }
+
+/* management */
+
+.management{
+    margin: auto;
+    width: 60vw;
+}
+
 /*---------------------------------------------------------------------------*/
 
 
@@ -962,4 +970,3 @@ body {
         width: 160px;
     }
 }
-
