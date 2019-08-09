@@ -5,12 +5,36 @@
 <!-- 화이팅 -->
 <div class="wrapper">
     {% for part in posts %}
-        <div class="card" onclick = "location.href = '{% url 'info_real' part.id %}'">
-            <img src="{% static 'img/1.png' %}" alt="TestImg" style="width:100%">
-            <h4 style="padding-left: 3px;">{{part.shopname}}</h4>
-            <p style="padding-left: 3px;">{{part.shop_description}}</p>
-        </div>
-    {% endfor %}                
-</div>
+=======
+    
+                 <div class="card" onclick = "location.href = '{% url 'info_real' part.id %}'">
+                    <img src="{{ part.profile_img.url }}" alt="TestImg" style="width:100%">
+                    <h4 style="padding-left: 3px;">{{part.shopname}}</h4>
+                    <p style="padding-left: 3px;">{{part.shop_description}}</p>
+                </div>
+    
+    {% endfor %}
+               
+    <div class = 'container'>
+        {% if posts.has_previous %}
+        <a href="?page=1">First</a>
+        <a href="?page={{posts.previous_page_number}}">Previous</a>
+        {% endif %}
+    
+        <span>{{posts.number}}</span>
+        <span>of</span>
+        <span>{{posts.paginator.num_pages}}</span>
+    
+        {% if posts.has_next %}
+        <a href="?page={{posts.next_page_number}}">Next</a>
+        <a href="?page={{posts.paginator.num_pages}}">Last</a>
+        {% endif %}
+        <br>
+        <br>
+    </div>
+</div>            
+
+            </div>
+>>>>>>> 7eac4b66fb8e5e5d3f91005bb1046408503294cd
 
 {% endblock %}
